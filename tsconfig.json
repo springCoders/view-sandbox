@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@view-sandbox/spanish-landing-view": [
+        "libs/spanish-landing-view/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

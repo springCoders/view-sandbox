@@ -7,5 +7,15 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "default": {
+      "tags": []
+    },
+    "default-e2e": {
+      "tags": []
+    },
+    "spanish-landing-view": {
+      "tags": []
+    }
+  }
 }

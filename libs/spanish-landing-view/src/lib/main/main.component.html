@@ -1,31 +1,4 @@
-<!-- <p>
-  add sticky mobile landing page here and publish the package.
-
-</p>
-
-<p>
-  {{title}}
-</p>
-
-<h1>Hello world !!</h1>
-
-        --><section id="header">
-
-<div class="container">
-<div class="login-part">
-<div class="logo">stackasian</div>
-<div class="logo-menu">
-        <div class="button"> 
-        
-            <span class="staus-1">status<mat-icon>notifications</mat-icon></span>
-        <span>Login<mat-icon>lock_open</mat-icon></span>
-        
-        </div>
-    
-</div>
-</div></div>
-
-        </section>
+<officeintegrator-header></officeintegrator-header>
 
 <section id="body-part">
         <div id="captioned-gallery">
@@ -62,7 +35,7 @@
 
 
 
-
+<mat-card>
 <section id="second-part" class="layout-part">
 <h1 class="heading">Let's Get Social</h1>
 <p class="sub-heading">Follow & Get in Touch with Us</p>
@@ -73,46 +46,57 @@
         <a href="#" class="icon icon-s icon-round shadow-huge bg-twitter"><mat-icon  >home</mat-icon>  </a>
     </div>
 </section>
+</mat-card>
 
+
+<mat-card class="four-layouts">
 <section id="third-part" class="layout-part">
         <h1 class="heading">Packed with Goodies</h1>
         <p class="sub-heading">The Absolute Best Products & Care for You</p>
         <p class="third-sub-heading">Over 10 years of Experience in Building Gorgeous Products only for you! We are Envato Elite.</p>
         <div class="divider"></div>
-        <div class="grid-columns">
-                <div class="box">
-                        <mat-icon style="color: #F6BB42">recent_actors</mat-icon>  
-                    <h3 class="bolder">Future Proof</h3>
-                    <p>
-                        Built to last, with the latest quality code.
-                    </p>
-                </div>        
-                <div class="box">
-                        <mat-icon  style="color: #BF263C">fiber_smart_record</mat-icon>    
-                    <i class="fab fa-cloudscale color-red1-dark fa-3x"></i>
-                    <h3 class="bolder">Powerful</h3>
-                    <p>
-                        Speed, Features and Flexibility all in One!
-                    </p>
-                </div>
-                <div class="box">
-                        <mat-icon style="color: #A0D468">check</mat-icon>    
-                    <h3 class="bolder">Easy to Use</h3>
-                    <p>
-                        Customers love our products for their ease.
-                    </p>
-                </div>   
-                <div class="box">
-                        <mat-icon  style="color: #4A89DC">ring_volume</mat-icon>    
-                    <h3 class="bolder">Customer Care</h3>
-                    <p>
-                        We treat others like we want to be treated.
-                    </p>
-                </div>
+
+        <mat-grid-list cols="2" rowHeight="150px">
+            <mat-grid-tile><div class="box">
+                <mat-icon style="color: #F6BB42">recent_actors</mat-icon>  
+            <h3 class="bolder">Future Proof</h3>
+            <p>
+                Built to last, with the latest quality code.
+            </p>
+        </div> </mat-grid-tile>
+            <mat-grid-tile> <div class="box">
+                <mat-icon  style="color: #BF263C">fiber_smart_record</mat-icon>    
+            <i class="fab fa-cloudscale color-red1-dark fa-3x"></i>
+            <h3 class="bolder">Powerful</h3>
+            <p>
+                Speed, Features and Flexibility all in One!
+            </p>
+        </div></mat-grid-tile>
+        <mat-grid-tile> <div class="box">
+            <mat-icon style="color: #A0D468">check</mat-icon>    
+        <h3 class="bolder">Easy to Use</h3>
+        <p>
+            Customers love our products for their ease.
+        </p>
+    </div> </mat-grid-tile>
+            <mat-grid-tile>       <div class="box">
+                <mat-icon  style="color: #4A89DC">ring_volume</mat-icon>    
+            <h3 class="bolder">Customer Care</h3>
+            <p>
+                We treat others like we want to be treated.
+            </p>
+        </div></mat-grid-tile>
+           
+          </mat-grid-list>
+
+
+
+
+        <div class="grid-columns">                    
+             
             </div>
-
 </section>
-
+</mat-card>
 
 <!----section id="fourth-part">
 
@@ -131,18 +115,24 @@
 
 
 
-
+<mat-card>
 <section id="last-two-part" class="layout-part">
         <h1 class="heading">Get Sticky Today</h1>
         <p class="sub-heading">Tons of Awesome Features just for You.</p>
         <p class="third-sub-heading">Fast, easy to use and filled with features. Get Sticky Today and give your site the Mobile Feeling it deserves. </p>
 
-        <a href="#" class="button button-m button-round-large button-center-medium shadow-huge bg-highlight bottom-30">PURCHASE NOW - $23</a>
-
+        <a href="#" class="button button-m button-round-large button-center-medium shadow-huge bg-highlight bottom-30"></a>
+        <mat-chip-list>
+       
+            <mat-chip color="accent" selected class="shadow-huge">PURCHASE NOW - $23</mat-chip>
+          </mat-chip-list>
+       
 </section>
+</mat-card>
 
 
 
+<mat-card>
 <section id="last-part" class="layout-part">
         <h1 class="heading-advacne">StickyMobile</h1>
         <span>Made with <mat-icon >favorite</mat-icon>  by Enabled</span>
@@ -152,6 +142,8 @@
                 <a href="#" class="icon icon-s icon-round shadow-huge bg-facebook"><mat-icon  >home</mat-icon>    </a>
                 <a href="#" data-menu="menu-call" class="icon icon-s icon-round left-10 right-10 shadow-huge bg-phone"><mat-icon  >phone</mat-icon>  </a>
                 <a href="#" class="icon icon-s icon-round shadow-huge bg-twitter"><mat-icon  >home</mat-icon>  </a>
+                <a href="#" class="icon icon-s icon-round shadow-huge bg-twitter"><mat-icon  style="background-color: #DA4453;">share</mat-icon>  </a>
+                <a href="#" class="icon icon-s icon-round shadow-huge bg-twitter"><mat-icon style="background-color: #656D78;" >expand_less</mat-icon>  </a>
             </div>
 
 
@@ -160,37 +152,13 @@
             <p class="footer-links"><a href="#" class="color-highlight">Privacy Policy</a> | <a href="#" class="color-highlight">Terms and Conditions</a> | <a href="#" class="back-to-top color-highlight"> Back to Top</a></p>
 
 </section>
+</mat-card>
 
 
-<section id="last-part1" class="layout-part">
-
-</section>
 
 
-<section id="footer"> 
-        <div layout="row" layout-wrap>
 
-   <div id="fotter-icon" class="active" flex="33">
-        <mat-icon flex="20" style="color: #DA444D;">home</mat-icon>     
-         <p style="color: #DA444D">Home</p>
-   </div>
-   <div id="fotter-icon" flex="33">
-        <mat-icon  >star_rate</mat-icon>      
-         <p>Features</p>
-   </div> 
-   <div id="fotter-icon" flex="33">
-        <mat-icon  >favorite</mat-icon>     
-         <p>Pages</p>
-   </div>
-   <div id="fotter-icon" flex="33">  
-        <mat-icon  >search</mat-icon>      
-         <p>Search</p>
-   </div>
-   <div id="fotter-icon" flex="33">
-        <mat-icon >settings</mat-icon>         
-         <p>Settings</p>
-   </div>
-</div>
 
-</section>
+<officeintegrator-footer></officeintegrator-footer>
+
 </section>

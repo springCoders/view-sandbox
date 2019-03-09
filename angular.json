@@ -2,7 +2,166 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "",
-  "projects": {},
+  "projects": {
+    "office-dashboard": {
+      "root": "apps/office-dashboard/",
+      "sourceRoot": "apps/office-dashboard/src",
+      "projectType": "application",
+      "prefix": "officeintegrator",
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/office-dashboard",
+            "index": "apps/office-dashboard/src/index.html",
+            "main": "apps/office-dashboard/src/main.ts",
+            "polyfills": "apps/office-dashboard/src/polyfills.ts",
+            "tsConfig": "apps/office-dashboard/tsconfig.app.json",
+            "assets": [
+              "apps/office-dashboard/src/favicon.ico",
+              "apps/office-dashboard/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/office-dashboard/src/styles.scss"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/office-dashboard/src/environments/environment.ts",
+                  "with": "apps/office-dashboard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "office-dashboard:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "office-dashboard:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "office-dashboard:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/office-dashboard/tsconfig.app.json",
+              "apps/office-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "apps/office-dashboard/jest.config.js",
+            "tsConfig": "apps/office-dashboard/tsconfig.spec.json",
+            "setupFile": "apps/office-dashboard/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "office-dashboard-e2e": {
+      "root": "apps/office-dashboard-e2e",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/builders:cypress",
+          "options": {
+            "cypressConfig": "apps/office-dashboard-e2e/cypress.json",
+            "tsConfig": "apps/office-dashboard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "office-dashboard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "office-dashboard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/office-dashboard-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "office-dash": {
+      "root": "libs/office-dash",
+      "sourceRoot": "libs/office-dash/src",
+      "projectType": "library",
+      "prefix": "officeintegrator",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/office-dash/tsconfig.lib.json",
+              "libs/office-dash/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/builders:jest",
+          "options": {
+            "jestConfig": "libs/office-dash/jest.config.js",
+            "tsConfig": "libs/office-dash/tsconfig.spec.json",
+            "setupFile": "libs/office-dash/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/schematics:component": {
+          "styleext": "scss"
+        }
+      }
+    }
+  },
   "cli": {
     "warnings": {
       "typescriptMismatch": false,
@@ -17,5 +176,6 @@
     "@nrwl/schematics:library": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "office-dashboard"
 }

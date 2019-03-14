@@ -1,3 +1,19 @@
-<p>
-  header works!
-</p>
+<div class="flex-container">
+<div  fxLayout="row-wrap" fxlayoutalign="space-around center" class="headStack">
+  <mat-toolbar [ngStyle]="{ color: 'white'}">
+    <mat-toolbar-row fxFlex="2 2 calc(10em + 10px)">
+      <span fxFlexOffset="100px" >Office Integrator</span>
+      <span class="example-spacer"></span>
+      <div class="navtab" fxLayout="row" fxLayoutGap="50px" fxLayoutGap.xs="0px"
+      fxShow fxHide.xs="true" fxHide.sm="true" [ngStyle]="{'font-size.px': 13, color: ''}">
+        <div>HOME</div>
+        <div>ABOUT</div>
+        <div>SERVICES</div>
+        <div>PORTFOLIO</div>
+        <div>BLOG</div>
+        <div fxFlexOffset="70px"></div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+</div>

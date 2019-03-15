@@ -44,15 +44,17 @@ section.stackasianF {
 .stack-relax .mat-card-title {
     font-size: 16px;
 }
+.mat-card-title {
+    font-size: 17px;
+    font-weight: 500;
+}
 .example-card {
      border-radius: 5px;
     text-align: center;
     border: 1px solid rgba(0,0,0,.1);
-    margin: 20px;
 }
 .example-card .mat-card{
-    background-color: #f7f8f9;
-    padding: 35px 16px;
+    background-color: #f7f8f9; 
     border-radius: 5px;
 }
 .stack-relax {
@@ -91,4 +93,91 @@ img {
     border-radius: 15px;
 }
 
- 
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .experience{
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .experienceyear{
+    font-size: 40px;
+    color: #ffb32f;
+    font-weight: 700;
+  }
+  .ourBusiness {
+    font-size: 18px;
+     color: '#666';
+     font-weight: 500;
+     letter-spacing: 1px;
+     margin-top: 40px;
+     color:rgb(29, 168, 171);
+     letter-spacing: .5px;
+  }
+  .whatIdo{
+      letter-spacing: 1px;
+      margin: 15px auto 0px auto;
+  }
+  .paragraph{
+     width: 50%;
+      text-align: center;
+       letter-spacing: .5px;
+        line-height: 25px; 
+  }
+  .paragraphXs{
+    width: 90%;
+     text-align: center;
+      letter-spacing: .5px;
+       line-height: 22px;
+  }
+.webImage1{
+     height : 100px;
+     width : 100px;
+     border-radius : 0px;  
+}
+
+.webImage2{
+    width: 100%;
+}
+.webImage3{  
+    font-size: 50px;
+    width: 100px;
+    display: block;
+    height: auto;
+    background-color: #14b5c5;
+    height: 100px;
+    line-height: 100px;
+    color: whitesmoke;
+    padding: 8px;
+    margin: 0 auto;
+}
+.ourBusiness::before {
+    position: relative;
+    color: #48b6c5;
+    content: " ";
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    display: table-cell;
+    width: 50px;
+    right: 60px;
+    top: 11px;
+}
+.ourBusiness::after {
+    position: relative;
+    color: #48b6c5;
+    content: " ";
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    display: table-cell;
+    width: 50px;
+    left: 60px;
+    top: 11px;
+}

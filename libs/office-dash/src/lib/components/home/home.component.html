@@ -112,7 +112,7 @@
               <div fxLayout="column" fxLayoutGap="30px">
                 <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
                   <mat-card-title>
-                    <a> WEB DESIGN </a>
+                        WEB DESIGN
                   </mat-card-title>
                 </div>
                 <div>
@@ -595,9 +595,11 @@
           <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
             <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
             <div>
-              <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
+              <mat-card [@openClose]="isOpen ? 'open' : 'closed'" [ngStyle]="{ 'padding.px': '0'}">
+                <img (mouseover)="fireEvent($event)" [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
                   src="assets/01.jpg">
+                  
+                    
               </mat-card>
             </div>
             <div>
@@ -950,7 +952,13 @@
 
 
 
-
+<ng-content></ng-content>
+    <div class="overlay" 
+        *ngIf="state" 
+        [@hover]="state" 
+        (@hover.done)="onDone($event)">
+      <ng-content select="[overlay]"></ng-content>
+    </div>`
 
 
 

@@ -147,7 +147,7 @@ img {
      width : 100px;
      border-radius : 0px;  
 }
-
+ 
 .webImage2{
     width: 100%;
 }
@@ -162,6 +162,11 @@ img {
     color: whitesmoke;
     padding: 8px;
     margin: 0 auto;
+}
+.webImage3:hover{
+    transform: rotate( -180deg );            
+    transition: transform 150ms ease-in;
+
 }
 // .ourBusiness::before {
 //     position: relative;

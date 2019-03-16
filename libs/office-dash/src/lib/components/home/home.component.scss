@@ -121,6 +121,7 @@ img {
      margin-top: 40px;
      color:rgb(29, 168, 171);
      letter-spacing: .5px;
+     text-transform: lowercase; 
   }
   .whatIdo{
       letter-spacing: 1px;
@@ -137,6 +138,9 @@ img {
      text-align: center;
       letter-spacing: .5px;
        line-height: 22px;
+  }
+  .paragraph, .paragraphXs p{
+      font-weight: 300px;
   }
 .webImage1{
      height : 100px;
@@ -159,25 +163,121 @@ img {
     padding: 8px;
     margin: 0 auto;
 }
-.ourBusiness::before {
+// .ourBusiness::before {
+//     position: relative;
+//     color: #48b6c5;
+//     content: " ";
+//     border-bottom-style: solid;
+//     border-bottom-width: 2px;
+//     display: table-cell;
+//     width: 50px;
+//     right: 60px;
+//     top: 11px;
+// }
+// .ourBusiness::after {
+//     position: relative;
+//     color: #48b6c5;
+//     content: " ";
+//     border-bottom-style: solid;
+//     border-bottom-width: 2px;
+//     display: block;
+//     width: 50px;
+//     left: 97px;
+//     bottom: 9px;
+//     /* float: left; */
+//     right: 50%;
+// }
+
+span.aboutBussiness::after {
     position: relative;
     color: #48b6c5;
     content: " ";
     border-bottom-style: solid;
     border-bottom-width: 2px;
     display: table-cell;
-    width: 50px;
-    right: 60px;
-    top: 11px;
+    width: 30px;
+    top: -10px;
+    right: 40px;
 }
-.ourBusiness::after {
+span.aboutBussiness::before {
     position: relative;
     color: #48b6c5;
     content: " ";
     border-bottom-style: solid;
     border-bottom-width: 2px;
     display: table-cell;
-    width: 50px;
-    left: 60px;
-    top: 11px;
+    width: 30px;
+    top: 12px;
+    left: 170px;
 }
+span.jnd::after {
+    position: relative;
+    color: #48b6c5;
+    content: " ";
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    display: table-cell;
+    width: 30px;
+    top: -6px;
+    left: 15px;
+}
+span.jnd::before {
+    position: relative;
+    color: #48b6c5;
+    content: " ";
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    display: table-cell;
+    width: 30px;
+    top: -7px;
+    right: 15px;
+}
+.Element{
+             font-size : 25px;
+            color: '#000';
+            font-weight: 500;
+            letter-spacing: 1px; 
+            line-height: 36px;
+            text-align: center;
+}
+.ElementXs{
+    font-size: 18px;
+    color: '#000'; 
+    font-weight: '500';
+    letter-spacing: 1px;
+    line-height: 27px; 
+    text-align: center;
+}
+.bussinessHeading{
+    font-size : 25px;
+    color: '#000';
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height : 36px;
+}
+.bussinessHeadingXs{
+    font-size : 18px;
+    color: '#000';
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height : 27px;
+}
+.description{
+    font-size: 18px;
+    color: #2d3f4d;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.businessdetail{
+     font-size : 15px;
+     color: '#707579';
+     letter-spacing: 1px;
+     line-height: 25px;
+}
+.setInMobile{
+    padding: 0px 15px;
+}
+.Emailmobiles{ width: 100%}
+.EmailWeb{ display: none;}
+.Email-mobile-web{display: none;}

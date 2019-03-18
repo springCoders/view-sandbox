@@ -8,6 +8,9 @@ section.stackasianF {
 .stk{
     padding-bottom: 100px;     
 }
+.bannerImage{
+    border-radius: 0px;
+}
 .coworking{
     font-size: 25px;
     color: #1a1a1a;
@@ -22,6 +25,19 @@ section.stackasianF {
     margin: 15px auto;
 
 }
+.flex-container{
+    padding: auto 30px;
+    flex-wrap: wrap;
+}
+
+.recentProject{
+    flex-wrap: wrap;
+}
+.recentProject2{
+    margin: 15px auto;
+}
+
+
 
 .example-card {
     max-width: 400px;
@@ -64,7 +80,43 @@ section.stackasianF {
 .example-button-row a {
   margin-right: 8px;
 }
- 
+.matCards{
+    font-size: 15px; 
+    color: #1a1a1a; 
+    letter-spacing: .5px; 
+    line-height: 21px;
+    text-align: center;
+}
+.portfolio{
+    width: 50%;
+    text-align: center; 
+    letter-spacing: .5px; 
+    line-height: 25px;
+}
+.portfolioXS {
+    width: 90%; 
+    text-align: center; 
+    letter-spacing: .5px; 
+    line-height: 22px;
+}
+.contactAddress{
+    letter-spacing: .5px; color: #1e283c; font-weight: 500;
+}
+.contactAddress1{
+    letter-spacing: .5px; color: #f8b22d;
+}
+// .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     margin: 0;
+//     border: none;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(013, 130, 230, 0.5);
+//     cursor: not-allowed;
+// }
+
 
 .stackasian-des a{
     color: #1a1a1a;
@@ -74,6 +126,14 @@ section.stackasianF {
 .stackasian-des p{
     color: #242424e6;
     letter-spacing: .2px;
+}
+.portfoliop{
+    font-weight: 300;
+}
+.portfolioImage{
+    object-fit: cover; 
+    height: 210px; 
+    border-radius: 0px;
 }
  
 .headen{
@@ -150,6 +210,7 @@ img {
  
 .webImage2{
     width: 100%;
+    text-align: center;
 }
 .webImage3{  
     font-size: 50px;

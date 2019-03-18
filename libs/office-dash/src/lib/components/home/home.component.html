@@ -1,21 +1,21 @@
 <officeintegrator-header></officeintegrator-header>
 <section class="stackasianF">
   <div fxLayout="row" fxLayoutAlign="space-around center">
-    <img fxFlexFill src='assets/banner.jpg' alt="ss" />
+    <img class="bannerImage" fxFlexFill src='assets/banner.jpg' alt="ss" />
   </div>
 
 
   <div fxLayout='column' fxLayoutAlign="center center" fxLayoutGap="10px">
 
     <div fxLayoutAlign="center center" fxFlexOffset="30px" ngClass="ourBusiness">
-        <span class="aboutBussiness">ABOUT OUR BUSINESS</span> 
-        
+      <span class="aboutBussiness">ABOUT OUR BUSINESS</span>
+
     </div>
 
     <div fxLayout='row' fxLayoutAlign="center center">
       <div fxFlex="20%" fxFlex.xs="5%"></div>
-      <div ngClass="Element" fxFlex="60%" fxFlex.xs="90%" fxLayoutAlign="center center" fxLayoutAlign="center center" 
-            ngClass.xs="ElementXs">
+      <div ngClass="Element" fxFlex="60%" fxFlex.xs="90%" fxLayoutAlign="center center" fxLayoutAlign="center center"
+        ngClass.xs="ElementXs">
         Duis Nisi Sapien, Elementum Finibus Fermentum Eget, Aliquet A Leo. Mauris Hendrerit Elit Vel Ex.
       </div>
       <div fxFlex="20%" fxFlex.xs="5%"></div>
@@ -24,8 +24,7 @@
       <div fxFlexOffset="70px" fxFlexOffset.xs="0px"></div>
       <div fxFlex="50%" fxFlex.xs="100%">
         <div fxLayout="column" ngClass.xs="setInMobile" fxLayoutGap="20px">
-          <div ngClass="bussinessHeading"   fxFlexOffset="15%"
-                ngClass.xs="bussinessHeadingXs">
+          <div ngClass="bussinessHeading" fxFlexOffset="15%" ngClass.xs="bussinessHeadingXs">
             Business, Development, Growth, Technology,
             Industry, Professionals Team, Agreement
           </div>
@@ -87,16 +86,14 @@
 
   <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
     <div fxFlexOffset="20px" ngClass="ourBusiness">
-        <span class="jnd">SERVISES</span> 
+      <span class="jnd">SERVISES</span>
     </div>
     <div>
-      <h2 ngClass="whatIdo" >
+      <h2 ngClass="whatIdo">
         WHAT I DO</h2>
     </div>
-    <div [ngClass]="['paragraph', 'paragraphXs']"
-          [ngClass.xs]="{'paragraph':false, 'paragraphXs':true}"
-          [ngClass.gt-xs]="{'paragraph':true, 'paragraphXs':false}"
-          	>
+    <div [ngClass]="['paragraph', 'paragraphXs']" [ngClass.xs]="{'paragraph':false, 'paragraphXs':true}"
+      [ngClass.gt-xs]="{'paragraph':true, 'paragraphXs':false}">
       <p [ngStyle]="{ 'font-weight': '300'}">
         Interdum a etiam sagittis vehicula porta. Massa felis eros quam
         blandit nulla dolor habitant. Ullamcorper quis ornare et proin
@@ -104,349 +101,60 @@
       </p>
     </div>
     <div>
-      <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-        <div>
-          <div class="example-card">
-            <mat-card>
-              <div fxLayout="column" fxLayoutGap="30px">
-                <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                  <mat-card-title>
-                        WEB DESIGN
-                  </mat-card-title>
-                </div>
-                <div>
-                    <div fxLayout="row">
-                        <div fxFlexOffset="25%"></div>
-                        <div [ngClass]="['webImage2']">
-                            <mat-icon ngClass="webImage3" >
+
+
+
+      <div fxLayout="row">
+        <div fxFlexOffset="70px"></div>
+        <div fxLayout="column" fxLayoutAlign="space-around center">
+          <div fxLayout="row" fxFlexOffset="20px"></div>
+          <div fxLayout="row inline" class="recentProject" fxLayoutAlign="space-around center">
+            <div class="recentProject2" fxFlex="28%" *ngFor="let whatIdo of whatIdo">
+              <div fxLayout="row-wrap">
+                <div fxLayoutGap="20px">
+                  <mat-card fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
+                    <div fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="space-around center">
+                      <div fxFlexOffset="10">
+                        <mat-card-title>
+                          {{whatIdo.service}}
+                        </mat-card-title>
+                      </div>
+                      <div>
+                        <div fxLayout="row" fxLayoutAlign="space-around center">
+                          <div fxFlexOffset="25%"></div>
+                          <div [ngClass]="['webImage2']">
+                            <mat-icon ngClass="webImage3">
                               add_to_queue
                             </mat-icon>
+                          </div>
+                          <div fxFlexOffset="25%"></div>
                         </div>
-                        <div fxFlexOffset="25%"></div>
-                      </div>                    
-                </div>
-                <div fxLayoutAlign="space-around center">
-                  <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                    <p
-                      [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                      Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                      eleifend cursus tempus curabitur posuere nam arcu platea sodales.
-                    </p>
-                  </mat-card-subtitle>
-                </div>
-                <div>
-                </div>
-              </div>
-            </mat-card>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div class="example-card">
-                <mat-card>
-                  <div fxLayout="column" fxLayoutGap="30px">
-                    <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                      <mat-card-title>
-                        <a> WEB DEVELOPMENT
-                          </a>
-                      </mat-card-title>
-                    </div>
-                    <div>
-                        <div fxLayout="row">
-                            <div fxFlexOffset="25%"></div>
-                            <div [ngClass]="['webImage2']">
-                                <mat-icon ngClass="webImage3">add_to_queue</mat-icon>
-                            </div>
-                            <div fxFlexOffset="25%"></div>
-                          </div>                    
-                    </div>
-                    <div fxLayoutAlign="space-around center">
-                      <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                        <p
-                          [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                          Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                          eleifend cursus tempus curabitur posuere nam arcu platea sodales.
-                        </p>
-                      </mat-card-subtitle>
-                    </div>
-                    <div>
-                    </div>
-                  </div>
-                </mat-card>
-              </div>
-          </div>
-        </div>
-        <div>
-          <div>
-              <div class="example-card">
-                  <mat-card>
-                    <div fxLayout="column" fxLayoutGap="30px">
-                      <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                        <mat-card-title>
-                          <a> WORDPRESS
-                            </a>
-                        </mat-card-title>
-                      </div>
-                      <div>
-                          <div fxLayout="row">
-                              <div fxFlexOffset="25%"></div>
-                              <div [ngClass]="['webImage2']">
-                                  <mat-icon ngClass="webImage3">add_to_queue</mat-icon>
-                              </div>
-                              <div fxFlexOffset="25%"></div>
-                            </div>                    
                       </div>
                       <div fxLayoutAlign="space-around center">
                         <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                          <p
-                            [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                            Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                            eleifend cursus tempus curabitur posuere nam arcu platea sodales.
+                          <p ngClass="matCards">
+                            {{whatIdo.description}}
                           </p>
                         </mat-card-subtitle>
-                      </div>
-                      <div>
                       </div>
                     </div>
                   </mat-card>
                 </div>
+              </div>
+            </div>
           </div>
+          <div fxLayout="row" fxFlexOffset="20px"></div>
         </div>
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+        <div fxFlexOffset="70px"></div>
       </div>
+
+
     </div>
-    <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-    <div>
-      <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-around center">
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-        <div>
-            <div class="example-card">
-                <mat-card>
-                  <div fxLayout="column" fxLayoutGap="30px">
-                    <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                      <mat-card-title>
-                        <a> GRAGHIC DESIGN
-                          </a>
-                      </mat-card-title>
-                    </div>
-                    <div>
-                        <div fxLayout="row">
-                            <div fxFlexOffset="25%"></div>
-                            <div [ngClass]="['webImage2']">
-                                <mat-icon ngClass="webImage3">add_to_queue</mat-icon>
-                            </div>
-                            <div fxFlexOffset="25%"></div>
-                          </div>                    
-                    </div>
-                    <div fxLayoutAlign="space-around center">
-                      <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                        <p
-                          [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                          Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                          eleifend cursus tempus curabitur posuere nam arcu platea sodales.
-                        </p>
-                      </mat-card-subtitle>
-                    </div>
-                    <div>
-                    </div>
-                  </div>
-                </mat-card>
-              </div>
-        </div>
-        <div>
-          <div>
-              <div class="example-card">
-                  <mat-card>
-                    <div fxLayout="column" fxLayoutGap="30px">
-                      <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                        <mat-card-title>
-                          <a> BRANDING
-                            </a>
-                        </mat-card-title>
-                      </div>
-                      <div>
-                          <div fxLayout="row">
-                              <div fxFlexOffset="25%"></div>
-                              <div [ngClass]="['webImage2']">
-                                  <mat-icon ngClass="webImage3">add_to_queue</mat-icon>
-                              </div>
-                              <div fxFlexOffset="25%"></div>
-                            </div>                    
-                      </div>
-                      <div fxLayoutAlign="space-around center">
-                        <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                          <p
-                            [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                            Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                            eleifend cursus tempus curabitur posuere nam arcu platea sodales.
-                          </p>
-                        </mat-card-subtitle>
-                      </div>
-                      <div>
-                      </div>
-                    </div>
-                  </mat-card>
-                </div>
-          </div>
-        </div>
-        <div>
-          <div>
-              <div class="example-card">
-                  <mat-card>
-                    <div fxLayout="column" fxLayoutGap="30px">
-                      <div fxLayoutAlign="space-around center" fxFlexOffset="15px">
-                        <mat-card-title>
-                          <a>OPENCART
-                            </a>
-                        </mat-card-title>
-                      </div>
-                      <div>
-                          <div fxLayout="row">
-                              <div fxFlexOffset="25%"></div>
-                              <div [ngClass]="['webImage2']">
-                                  <mat-icon ngClass="webImage3">add_to_queue</mat-icon>
-                              </div>
-                              <div fxFlexOffset="25%"></div>
-                            </div>                    
-                      </div>
-                      <div fxLayoutAlign="space-around center">
-                        <mat-card-subtitle fxFlex="90%" fxFlex.xs="90%" fxFlex.sm="80%">
-                          <p
-                            [ngStyle]="{'font-size.px': 15, color: '#1a1a1a', 'letter-spacing.px': .5, 'line-height.px': 21}">
-                            Proin a ullamcorper et primis lobortis laoreet senectus. Vitae dignissim sollicitudin
-                            eleifend cursus tempus curabitur posuere nam arcu platea sodales.
-                          </p>
-                        </mat-card-subtitle>
-                      </div>
-                      <div>
-                      </div>
-                    </div>
-                  </mat-card>
-                </div>
-          </div>
-        </div>
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-      </div>
-    </div>
-    <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+
   </div>
 
 
   <div class="stk">
-
-    <!-- <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
-      <div class="coworking">
-          Office Integrator Coworking Space - Boost Your Productivity
-      </div>
-
-      <div>
-        <div fxFlexOffset="20%"></div>
-        <div class="stackasianSpace" layout-align="center center" fxLayoutAlign="space-around center">
-          <p>
-            Each Space is Created and Managed By Co.Up’s Team of Real Estate, Design, And
-            Operations Experts. We handcraft every step of the Up.Co experience to ensure
-            you arrive to a space that’s fully-equipped and primed for productivity.
-          </p>
-
-        </div>
-        <div fxFlexOffset="20%"></div>
-      </div>
-    </div> -->
-
-
-
-    <!-- 
-    <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap = 40px fxLayoutAlign="space-around center">
-      <div fxFlexOffset="30px"></div>
-      <div fxFlex="100%" fxLayoutAlign="space-around center">
-        <div class="example-card" fxFlex.sm="95%">
-          <mat-card fxFlex="100%">
-            <div fxLayout="column">
-              <div fxLayoutAlign="space-around center">
-                <img class="imgg" src="assets/13.jpg" />
-              </div>
-              <div class="stack-relax" fxLayoutAlign="space-around center">
-                <mat-card-title>Relax, entertainment room, Office Integrator
-                </mat-card-title>
-              </div>
-              <div class="stack-work" fxLayoutAlign="space-around center">
-                <mat-card-subtitle>Work in any bussiness Club the way you like worldwide</mat-card-subtitle>
-              </div>
-              <div>
-              </div>
-            </div>
-            <mat-card-content>
-              <div class="example-button-row btnd" fxLayoutAlign="center center">
-                <button mat-raised-button class="stack-work">
-                  LEARN MORE
-                </button>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-
-      <div fxFlex="100%" fxLayoutAlign="space-around center">
-        <div class="example-card" fxFlex.sm="95%">
-          <mat-card fxFlex="100%">
-            <div fxLayout="column">
-              <div fxLayoutAlign="space-around center">
-                <img class="imgg" src="assets/13.jpg" />
-              </div>
-              <div class="stack-relax" fxLayoutAlign="space-around center">
-                <mat-card-title>Variouse working space, Office Integrator
-                </mat-card-title>
-              </div>
-              <div class="stack-work" fxLayoutAlign="space-around center">
-                <mat-card-subtitle>Work in any bussiness Club the way you like worldwide</mat-card-subtitle>
-              </div>
-              <div>
-              </div>
-            </div>
-            <mat-card-content>
-              <div class="example-button-row btnd" fxLayoutAlign="center center">
-                <button mat-raised-button class="stack-work">
-                  LEARN MORE
-                </button>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-
-      <div fxFlex="100%" fxLayoutAlign="space-around center">
-        <div class="example-card" fxFlex.sm="95%">
-          <mat-card fxFlex="100%">
-            <div fxLayout="column">
-              <div fxLayoutAlign="space-around center">
-                <img class="imgg" src="assets/13.jpg" />
-              </div>
-              <div class="stack-relax" fxLayoutAlign="space-around center">
-                <mat-card-title>Private meeting room available, Office Integrator
-                </mat-card-title>
-              </div>
-              <div class="stack-work" fxLayoutAlign="space-around center">
-                <mat-card-subtitle>A dedicated work station in a space shared
-                  with others
-                </mat-card-subtitle>
-              </div>
-              <div>
-              </div>
-            </div>
-            <mat-card-content>
-              <div class="example-button-row btnd" fxLayoutAlign="center center">
-                <button mat-raised-button class="stack-work">
-                  LEARN MORE
-                </button>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </div>
-      <div fxFlexOffset="30px"></div>
-
-    </div> -->
 
     <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutGap="30px">
       <div fxFlex="35%" fxFlexOffset="10%">
@@ -497,26 +205,26 @@
                 </div>
               </mat-grid-tile>
               <mat-grid-tile>
-                  <div fxLayout="row">
-                    <div class="stackair" fxFlex="20%" fxLayoutAlign="center">
-                      <mat-icon class="example-icon">device_hub</mat-icon>
-                    </div>
-                    <div fxFlex="80%">
-                      <div class="stackasian-des" fxLayout="column">
-                        <div fxLayoutAlign="start start">
-                          <a> CREATIVE TECHNOLOGY </a>
-                        </div>
-                        <div>
-                          <p fxLayoutAlign="start start">
-                            Sed ut perspiciatis unde omnis natus error dolor
-                            volup tatem ed accusantium doloremque , tota.
-                          </p>
-                        </div>
-                      </div>
-  
-                    </div>
+                <div fxLayout="row">
+                  <div class="stackair" fxFlex="20%" fxLayoutAlign="center">
+                    <mat-icon class="example-icon">device_hub</mat-icon>
                   </div>
-                </mat-grid-tile>
+                  <div fxFlex="80%">
+                    <div class="stackasian-des" fxLayout="column">
+                      <div fxLayoutAlign="start start">
+                        <a> CREATIVE TECHNOLOGY </a>
+                      </div>
+                      <div>
+                        <p fxLayoutAlign="start start">
+                          Sed ut perspiciatis unde omnis natus error dolor
+                          volup tatem ed accusantium doloremque , tota.
+                        </p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </mat-grid-tile>
             </mat-grid-list>
           </div>
         </div>
@@ -573,306 +281,189 @@
 
 
 
-  <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
-    <div fxFlexOffset="20px" ngClass="ourBusiness">
-      <span class="jnd">PORTFOLIO</span>
-    </div>
-    <div>
-      <h2 ngClass="whatIdo" >
-        RECENT PROJECTS</h2>
-    </div>
-    <div [ngStyle]="{ 'width': '50%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 25 }"
-      [ngStyle.xs]="{'width': '90%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 22}">
-      <p [ngStyle]="{ 'font-weight': '300'}">
-        Interdum a etiam sagittis vehicula porta. Massa felis eros quam
-        blandit nulla dolor habitant. Ullamcorper quis ornare et proin
-        pellentesque.
-      </p>
-    </div>
-    <div>
-      <div fxLayout="column" fxLayoutGap="40px" fxLayoutAlign="space-between center">
-        <div>
-          <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
-            <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-            <div>
-              <mat-card [@openClose]="isOpen ? 'open' : 'closed'" [ngStyle]="{ 'padding.px': '0'}">
-                <img (mouseover)="fireEvent($event)" [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                  src="assets/01.jpg">
-                  
-                    
-              </mat-card>
-            </div>
-            <div>
-              <div>
-                <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                  <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                    src="assets/04.jpg">
-                </mat-card>
+    <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
+      <div fxFlexOffset="20px" ngClass="ourBusiness">
+        <span class="jnd">PORTFOLIO</span>
+      </div>
+      <div>
+        <h2 ngClass="whatIdo">
+          RECENT PROJECTS</h2>
+      </div>
+      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+        <p ngClass="portfoliop">
+          Interdum a etiam sagittis vehicula porta. Massa felis eros quam
+          blandit nulla dolor habitant. Ullamcorper quis ornare et proin
+          pellentesque.
+        </p>
+      </div>
+      <div>
+
+
+        <div fxLayout="row">
+          <div fxFlexOffset="50px"></div>
+          <div fxLayout="column">
+            <div fxLayout="row" fxFlexOffset="20px"></div>
+            <div fxLayout="row inline" class="recentProject" fxLayoutAlign="space-around center">
+              <div class="recentProject2" *ngFor="let portflio of portflio">
+                <div fxLayout="row-wrap">
+                  <div fxLayoutGap="20px">
+                    <mat-card fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
+                      <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
+
+                    </mat-card>
+                  </div>
+                </div>
               </div>
             </div>
-            <div>
-              <div>
-                <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                  <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                    src="assets/03.jpg">
-                </mat-card>
-              </div>
-            </div>
-            <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+            <div fxLayout="row" fxFlexOffset="20px"></div>
           </div>
+          <div fxFlexOffset="50px"></div>
         </div>
-        <div>
-          <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
-            <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-            <div>
-              <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                  src="assets/05.jpg">
-              </mat-card>
-            </div>
-            <div>
-              <div>
-                <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                  <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                    src="assets/right-img1.jpg">
-                </mat-card>
+
+      </div>
+      <div fxFlexOffset="0px" fxFlexOffset.xs="0px"></div>
+      <div fxFlexOffset="0px"></div>
+    </div>
+
+    <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
+      <div fxFlexOffset="20px" ngClass="ourBusiness">
+        <span class="jnd">TESTIMONIAL</span>
+      </div>
+      <div>
+        <h2 ngClass="whatIdo">
+          WHAT CLIENT SAY’S
+        </h2>
+      </div>
+      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+        <p ngClass="portfoliop">
+          Interdum a etiam sagittis vehicula porta. Massa felis eros quam
+          blandit nulla dolor habitant. Ullamcorper quis ornare et proin
+          pellentesque.
+        </p>
+      </div>
+      <div fxFlexOffset="100px">
+        <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
+          <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+          <div fxFlex="50%" *ngFor="let client of client">
+            <mat-card [ngStyle]="{ 'padding.px': '0'}">
+              <div class="flex-container" [ngStyle]="{ 'padding.px': '0 25'}">
+                <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start start">
+                  <div fxFlexOffset="60px">
+                    <img
+                      [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
+                      fxFlex="100%" src="{{client.image}}">
+
+                  </div>
+                  <div>
+                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                  </div>
+                  <div>
+                    <a [ngStyle]="{'font-size.px': 16, color: '#6f7177', 'letter-spacing.px': .4}">
+                      {{client.name}}
+                    </a>
+                  </div>
+                  <div>
+                    <p
+                      [ngStyle]="{'font-size.px': 14, color: '#7e838e', 'letter-spacing.px': .4,  'line-height.px': 21}">
+                      {{client.comment}}
+                    </p>
+                  </div>
+                  <div></div>
+                </div>
               </div>
-            </div>
-            <div>
-              <div>
-                <mat-card [ngStyle]="{ 'padding.px': '0'}">
-                  <img [ngStyle]="{'object-fit': 'cover', 'height.px': 210, 'border-radius.px': 0}" fxFlex="100%"
-                    src="assets/06.jpg">
-                </mat-card>
-              </div>
-            </div>
-            <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+            </mat-card>
           </div>
+
+          <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
         </div>
       </div>
+      <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+      <div fxFlexOffset="30px"></div>
     </div>
-    <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-    <div fxFlexOffset="30px"></div>
-  </div>
 
-  <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
-    <div fxFlexOffset="20px" ngClass="ourBusiness">
-        <span  class="jnd">TESTIMONIAL</span> 
-    </div>
-    <div>
-      <h2 ngClass="whatIdo" >
-        WHAT CLIENT SAY’S
-      </h2>
-    </div>
-    <div [ngStyle]="{ 'width': '50%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 25 }"
-      [ngStyle.xs]="{'width': '90%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 22}">
-      <p [ngStyle]="{ 'margin.px': '0', 'line-height.px': 25, 'font-weight': 300}">
-        Interdum a etiam sagittis vehicula porta. Massa felis eros quam
-        blandit nulla dolor habitant. Ullamcorper quis ornare et proin
-        pellentesque.
-      </p>
-    </div>
-    <div fxFlexOffset="100px">
-      <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-        <div fxFlex="50%">
-          <mat-card [ngStyle]="{ 'padding.px': '0'}">
-            <div class="flex-container" [ngStyle]="{ 'padding.px': '0 25'}">
-              <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start start">
-                <div fxFlexOffset="60px">
-                  <img
-                    [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
-                    fxFlex="100%" src="assets/right-img1.jpg">
 
-                </div>
-                <div>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                </div>
-                <div>
-                  <a [ngStyle]="{'font-size.px': 16, color: '#6f7177', 'letter-spacing.px': .4}">
-                    Grace Ruby
-                  </a>
-                </div>
-                <div>
-                  <p [ngStyle]="{'font-size.px': 14, color: '#7e838e', 'letter-spacing.px': .4,  'line-height.px': 21}">
-                    Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum
-                    ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per
-                    aenean commodo sociosqu.
-                  </p>
-                </div>
-                <div></div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
-        <div fxFlex="50%">
-          <mat-card [ngStyle]="{ 'padding.px': '0'}">
-            <div class="flex-container" [ngStyle]="{ 'padding.px': '0 25'}">
-              <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start start">
-                <div fxFlexOffset="60px">
-                  <img
-                    [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
-                    fxFlex="100%" src="assets/right-img1.jpg">
 
-                </div>
-                <div>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                </div>
-                <div>
-                  <a [ngStyle]="{'font-size.px': 16, color: '#6f7177', 'letter-spacing.px': .4}">
-                    Grace Ruby
-                  </a>
-                </div>
-                <div>
-                  <p [ngStyle]="{'font-size.px': 14, color: '#7e838e', 'letter-spacing.px': .4, 'line-height.px': 21}">
-                    Sem duis platea erat feugiat vivamus nascetur sapien tortor. Sollic dictum
-                    ultric. Aliquam inceptos bibendum fringilla sodales. Molest lacin urna per
-                    aenean commodo sociosqu.
-                  </p>
-                </div>
-                <div></div>
-              </div>
-            </div>
-          </mat-card>
-        </div>
+    <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
+      <div fxFlexOffset="20px" ngClass="ourBusiness">
+        <span class="jnd">CONTACT</span>
 
-        <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-      </div>
-    </div>
-    <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-    <div fxFlexOffset="30px"></div>
-  </div>
-
-  <!-- <div fxLayout="row" fxLayoutAlign="space-between center" >
-      <div fxFlexOffset="70px"> </div>
-      <div>
-          <div fxLayout="column" fxLayoutGap="20px" fxFlexOffset="30px" fxLayoutAlign="space-between center" >
-              <div>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}"> 
-                    sentiment_satisfied_alt
-                  </mat-icon>
-              </div>
-              <div  [ngClass]="['experienceyear']">
-                7+
-              </div>
-              <div  [ngClass]="['experience']">Years of Experience</div> 
-            </div>            
       </div>
       <div>
-          <div fxLayout="column" fxLayoutGap="20px" fxFlexOffset="30px" fxLayoutAlign="space-between center" >
-              <div>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}"> 
-                    sentiment_satisfied_alt
-                  </mat-icon>
-              </div>
-              <div>
-                7+
-              </div>
-              <div>Years of Experience</div> 
-            </div> 
+        <h2 ngClass="whatIdo">
+          GET IN TOUCH
+        </h2>
       </div>
-      <div>
-          <div fxLayout="column" fxLayoutGap="20px" fxFlexOffset="30px" fxLayoutAlign="space-between center" >
-              <div>
-                  <mat-icon [ngStyle]="{'color': '#f8b22d'}"> 
-                    sentiment_satisfied_alt
-                  </mat-icon>
+      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+        <p ngClass="portfoliop">
+          Interdum a etiam sagittis vehicula porta. Massa felis eros quam
+          blandit nulla dolor habitant. Ullamcorper quis ornare et proin
+          pellentesque.
+        </p>
+      </div>
+      <div fxFlexOffset="10px" [ngStyle]="{ 'width': '100%'}">
+        <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
+          <div fxFlexOffset="30px"></div>
+          <div fxFlex="40%">
+            <div fxLayout="column" fxLayoutGap="15px">
+              <div ngClass="contactAddress">
+                Email
+              </div>
+              <div ngClass="contactAddress1">
+                yourdomainname@gmail.com
+              </div>
+              <div ngClass="contactAddress">
+                Phone
+              </div>
+              <div ngClass="contactAddress1">
+                +00 61 700 800
+              </div>
+              <div ngClass="contactAddress">
+                Address
+              </div>
+              <div ngClass="contactAddress1">
+                Mouroubra WA 6472, Australia.
+              </div>
+              <div ngClass="contactAddress">
+                Website
+              </div>
+              <div ngClass="contactAddress1">
+                www.yourdomain.com
               </div>
               <div>
-                7+
-              </div>
-              <div>Years of Experience</div> 
-            </div> 
-      </div> 
-      <div fxFlexOffset="70px"> </div>
-    </div> -->
-    
-
-  <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
-    <div fxFlexOffset="20px" ngClass="ourBusiness">
-        <span  class="jnd">CONTACT</span> 
-      
-    </div>
-    <div>
-      <h2 ngClass="whatIdo" >
-        GET IN TOUCH
-      </h2>
-    </div>
-    <div [ngStyle]="{ 'width': '50%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 25 }"
-      [ngStyle.xs]="{'width': '90%', 'text-align': 'center', 'letter-spacing.px': .5, 'line-height.px': 22}">
-      <p [ngStyle]="{ 'margin.px': '0', 'line-height.px': 25, 'font-weight': 300}">
-        Interdum a etiam sagittis vehicula porta. Massa felis eros quam
-        blandit nulla dolor habitant. Ullamcorper quis ornare et proin
-        pellentesque.
-      </p>
-    </div>
-    <div fxFlexOffset="10px" [ngStyle]="{ 'width': '100%'}">
-      <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
-        <div fxFlexOffset="30px"></div>
-        <div fxFlex="40%">
-          <div fxLayout="column" fxLayoutGap="15px">
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#1e283c', 'font-weight': 500 }">
-              Email
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#f8b22d' }">
-              yourdomainname@gmail.com
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#1e283c', 'font-weight': 500 }">
-              Phone
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#f8b22d' }">
-              +00 61 700 800
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#1e283c', 'font-weight': 500 }">
-              Address
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#f8b22d' }">
-              Mouroubra WA 6472, Australia.
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#1e283c', 'font-weight': 500 }">
-              Website
-            </div>
-            <div [ngStyle]="{'letter-spacing.px': .5, 'color': '#f8b22d' }">
-              www.yourdomain.com
-            </div>
-            <div>
                 <mat-icon [ngStyle]="{'color': '#f8b22d'}">facebook</mat-icon>
+              </div>
             </div>
           </div>
-        </div>
-        <div fxFlex="60%" fxLayoutAlign="space-between center">
-          <form class="example-form">
+          <div fxFlex="60%" fxLayoutAlign="space-between center">
+            <form class="example-form">
 
 
-            <table class="example-full-width" cellspacing="30">
-              <tr>
-                <td>
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Your Name">
-                  </mat-form-field>
-                </td>
-                <td ngClass="Emailmobiles" [ngClass.xs]="['EmailWeb']"> 
-                  <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email Address">
-                  </mat-form-field>
-                </td>
-              </tr>
-              <tr ngClass="Email-mobile-web" [ngClass.xs]="['EmailMobile']">
-                <td>
+              <table class="example-full-width" cellspacing="30">
+                <tr>
+                  <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Email Address">
-                      </mat-form-field>
-                </td>
-              </tr>
-            </table>
+                      <input matInput placeholder="Your Name">
+                    </mat-form-field>
+                  </td>
+                  <td ngClass="Emailmobiles" [ngClass.xs]="['EmailWeb']">
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Email Address">
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr ngClass="Email-mobile-web" [ngClass.xs]="['EmailMobile']">
+                  <td>
+                    <mat-form-field class="example-full-width">
+                      <input matInput placeholder="Email Address">
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </table>
 
-            
+
               <table class="example-full-width" cellspacing="30" [ngStyle]="{'width': '100%'}">
                 <tr>
                   <td>
@@ -883,30 +474,27 @@
                 </tr>
                 <tr>
                   <td>
-                    <mat-form-field class="example-full-width"  [ngStyle]="{'width': '100%'}">
+                    <mat-form-field class="example-full-width" [ngStyle]="{'width': '100%'}">
                       <textarea matInput placeholder="Message"></textarea>
                     </mat-form-field>
                   </td>
                 </tr>
-
-                <button mat-raised-button [ngStyle]="{ 'background-color': '#f8b22d','color': 'white', 'letter-spacing.px': '1'}" >
-                    SEND MESSAGE
-                  </button>
+                <button mat-raised-button
+                  [ngStyle]="{ 'background-color': '#f8b22d','color': 'white', 'letter-spacing.px': '1'}">
+                  SEND MESSAGE
+                </button>
               </table>
-              
-            
-          </form>
-
+            </form>
+          </div>
+          <div fxFlexOffset="70px"></div>
         </div>
-        <div fxFlexOffset="70px"></div>
       </div>
+      <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
+      <div fxFlexOffset="30px"></div>
     </div>
-    <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-    <div fxFlexOffset="30px"></div>
-  </div>
 
-  <div></div>
-  <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap="0px">
+    <div></div>
+    <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap="0px">
       <div fxFlexOffset="70px"></div>
       <div fxFlex="50%" fxFlex.gt-sm="100%" fxLayoutAlign="center center">
         <div fxLayout="column" fxFlex.gt-sm="100%">
@@ -941,28 +529,7 @@
       </div>
       <div fxFlexOffset="70px"></div>
     </div>
-
-
-
-
   </div>
-
-
 </section>
-
-
-
-<ng-content></ng-content>
-    <div class="overlay" 
-        *ngIf="state" 
-        [@hover]="state" 
-        (@hover.done)="onDone($event)">
-      <ng-content select="[overlay]"></ng-content>
-    </div>`
-
-
-
-
-
 
 <officeintegrator-footer></officeintegrator-footer>

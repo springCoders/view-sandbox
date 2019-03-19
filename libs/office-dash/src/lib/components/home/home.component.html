@@ -307,11 +307,15 @@
               <div class="recentProject2" *ngFor="let portflio of portflio">
                 <div fxLayout="row-wrap">
                   <div fxLayoutGap="20px">
-                    <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
-                      <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
-                      <div ngClass="hoverEffect" fxFlex="100%">
-                        <p>hello</p>
-                      </div>
+                    <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}"> 
+                        
+                      <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="" (click)="imageZoom(portflio.image)">
+                     
+                      <div ngClass="hoverEffect" fxFlex="100%" fxLayoutAlign="space-around center" (click)="imageZoom(portflio.image)">
+                          <mat-icon>visibility_off</mat-icon>
+                          <div class="department">{{portflio.department}}</div>
+                          
+                      </div>  
                     </mat-card> 
                   </div>
                 </div>
@@ -322,11 +326,25 @@
           <div fxFlexOffset="50px"></div>
         </div>
 
+         
+          
+          <div id="myModal" class="modal" *ngIf="zoom">
+              <div fxLayout="row inline"  fxLayoutAlign="space-around center">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close" ngClass.xs="closeXs" (click)="close()">&times;</span>
+                <img class="modalImg" ngClass.xs="modalImage" src="{{vv}}"  alt="">
+                 
+              </div>
+              </div>
+          </div>
+          
+
+
       </div>
       <div fxFlexOffset="0px" fxFlexOffset.xs="0px"></div>
       <div fxFlexOffset="0px"></div>
     </div>
-
     <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
       <div fxFlexOffset="20px" ngClass="ourBusiness">
         <span class="jnd">TESTIMONIAL</span>
@@ -354,7 +372,6 @@
                     <img
                       [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
                       fxFlex="100%" src="{{client.image}}">
-
                   </div>
                   <div>
                     <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
@@ -434,9 +451,9 @@
               <div ngClass="contactAddress1">
                 www.yourdomain.com
               </div>
-              <div>
+              <!-- <div>
                 <mat-icon [ngStyle]="{'color': '#f8b22d'}">facebook</mat-icon>
-              </div>
+              </div> -->
             </div>
           </div>
           <div fxFlex="60%" fxLayoutAlign="space-between center">
@@ -481,8 +498,7 @@
                     </mat-form-field>
                   </td>
                 </tr>
-                <button mat-raised-button
-                  [ngStyle]="{ 'background-color': '#f8b22d','color': 'white', 'letter-spacing.px': '1'}">
+                <button mat-raised-button ngClass="buttonOffice">
                   SEND MESSAGE
                 </button>
               </table>

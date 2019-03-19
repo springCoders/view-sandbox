@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, HostListener, ElementRef } from '@angular/core';
 import { AnimationEvent } from '@angular/animations';
 import {
   trigger,
@@ -33,15 +33,17 @@ import {
   // ], 
 })
 export class HomeComponent implements OnInit  {
+  zoom: Boolean = false;
+  vv: any;
    portflio = [
-  {id: 1, image: "assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"},
-  {id: 1, image: "assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"},
-  {id: 1, image:"assets/01.jpg"}
+  {id: 1, image: "assets/01.jpg", department: 'Angular Development'},
+  {id: 1, image:"assets/01.jpg", department: 'Pythan Development'},
+  {id: 1, image:"assets/01.jpg", department: 'ReactJS Development'},
+  {id: 1, image:"assets/01.jpg", department: 'React Native Development'},
+  {id: 1, image: "assets/01.jpg", department: 'Web Development'},
+  {id: 1, image:"assets/01.jpg", department: 'Wordpress Development'},
+  {id: 1, image:"assets/01.jpg", department: 'Jave Development'},
+  {id: 1, image:"assets/01.jpg", department: ' Development'}
 ];
 
 whatIdo = [
@@ -70,5 +72,12 @@ client =[
   constructor() { }
 
   ngOnInit() {}
- 
+
+  imageZoom(vk){
+    this.zoom = true;
+    this.vv = vk;
+  }
+  close(){
+    this.zoom = false;
+  }
 }

@@ -135,6 +135,14 @@ section.stackasianF {
     height: 210px; 
     border-radius: 0px;
 }
+.hoverEffect{
+    display: none;
+}
+.portfolioImage :hover .hoverEffect {
+    display: block;
+    opacity: .5;
+    background-color: black;
+}
  
 .headen{
     font-size: 20px;

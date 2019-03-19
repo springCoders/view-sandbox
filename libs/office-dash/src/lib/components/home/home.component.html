@@ -104,17 +104,17 @@
 
 
 
-      <div fxLayout="row">
-        <div fxFlexOffset="70px"></div>
+      <div fxLayout="row" fxLayout.xs="column">
+        <div fxFlexOffset="70px" fxFlexOffset.xs="0px"></div>
         <div fxLayout="column" fxLayoutAlign="space-around center">
-          <div fxLayout="row" fxFlexOffset="20px"></div>
-          <div fxLayout="row inline" class="recentProject" fxLayoutAlign="space-around center">
-            <div class="recentProject2" fxFlex="28%" *ngFor="let whatIdo of whatIdo">
-              <div fxLayout="row-wrap">
+          <div fxLayout="row" fxFlexOffset="20px" fxFlexOffset.xs="0px"></div>
+          <div fxLayout="row inline" fxLayout.xs="column" class="recentProject" fxLayoutAlign="space-around center">
+            <div class="recentProject2" fxFlex="28%" fxFlex.sm="47%" fxLayoutAlign.xs="center center" *ngFor="let whatIdo of whatIdo">
+              <div fxLayout="row-wrap" fxLayout.xs="column-wrap" fxFlex.xs="60%"  fxLayoutAlign="space-around center">
                 <div fxLayoutGap="20px">
                   <mat-card fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
                     <div fxLayout="column" fxLayoutGap="30px" fxLayoutAlign="space-around center">
-                      <div fxFlexOffset="10">
+                      <div fxFlexOffset="10" fxFlexOffset.xs="10">
                         <mat-card-title>
                           {{whatIdo.service}}
                         </mat-card-title>
@@ -143,9 +143,9 @@
               </div>
             </div>
           </div>
-          <div fxLayout="row" fxFlexOffset="20px"></div>
+          <div fxLayout="row" fxFlexOffset="20px" fxFlexOffset="0px"></div>
         </div>
-        <div fxFlexOffset="70px"></div>
+        <div fxFlexOffset="70px" fxFlexOffset.xs="0px"></div>
       </div>
 
 
@@ -160,7 +160,7 @@
       <div fxFlex="35%" fxFlexOffset="10%">
         <div fxLayout="column">
           <div>
-            <mat-grid-list cols="1" rowHeight="2:1">
+            <mat-grid-list cols="1" rowHeight="3:1">
               <mat-grid-tile>
                 <div fxLayout="row">
                   <div class="stackair" fxFlex="20%" fxLayoutAlign="center">
@@ -307,10 +307,12 @@
               <div class="recentProject2" *ngFor="let portflio of portflio">
                 <div fxLayout="row-wrap">
                   <div fxLayoutGap="20px">
-                    <mat-card fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
+                    <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
                       <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
-
                     </mat-card>
+                    <!-- <mat-card ngClass="hoverEffect" fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
+                      <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
+                    </mat-card> -->
                   </div>
                 </div>
               </div>

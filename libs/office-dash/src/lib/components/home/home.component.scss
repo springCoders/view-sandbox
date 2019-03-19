@@ -134,14 +134,26 @@ section.stackasianF {
     object-fit: cover; 
     height: 210px; 
     border-radius: 0px;
+    position: relative;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
+.portfolioImage:hover{
+    opacity: .2;
+}
+  
 .hoverEffect{
-    display: none;
+    transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center; 
 }
-.portfolioImage :hover .hoverEffect {
-    display: block;
-    opacity: .5;
-    background-color: black;
+.portfolioImage:hover .hoverEffect {
+	display: block; 
 }
  
 .headen{

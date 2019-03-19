@@ -109,7 +109,7 @@
         <div fxLayout="column" fxLayoutAlign="space-around center">
           <div fxLayout="row" fxFlexOffset="20px" fxFlexOffset.xs="0px"></div>
           <div fxLayout="row inline" fxLayout.xs="column" class="recentProject" fxLayoutAlign="space-around center">
-            <div class="recentProject2" fxFlex="28%" fxFlex.sm="47%" fxLayoutAlign.xs="center center" *ngFor="let whatIdo of whatIdo">
+            <div class="recentProject2" fxFlex="28%" fxFlex.xs="60%" fxFlex.sm="47%" fxLayoutAlign.xs="center center" *ngFor="let whatIdo of whatIdo">
               <div fxLayout="row-wrap" fxLayout.xs="column-wrap" fxFlex.xs="60%"  fxLayoutAlign="space-around center">
                 <div fxLayoutGap="20px">
                   <mat-card fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
@@ -309,10 +309,10 @@
                   <div fxLayoutGap="20px">
                     <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
                       <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
-                    </mat-card>
-                    <!-- <mat-card ngClass="hoverEffect" fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
-                      <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="">
-                    </mat-card> -->
+                      <div ngClass="hoverEffect" fxFlex="100%">
+                        <p>hello</p>
+                      </div>
+                    </mat-card> 
                   </div>
                 </div>
               </div>

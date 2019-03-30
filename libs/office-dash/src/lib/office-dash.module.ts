@@ -14,6 +14,13 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CarouselComponent,CarouselItemElement } from './components/carousel/carousel.component';
+import { CarouselItemDirective } from  './components/carousel/carousel-item.directive';
+
+
+
+
+
 @NgModule({
   imports: [CommonModule,
     FlexLayoutModule, 
@@ -25,12 +32,15 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   declarations: [
     HomeComponent, 
     HeaderComponent, 
-    FooterComponent
+    FooterComponent,
+    CarouselComponent,
+    CarouselItemElement,
+    CarouselItemDirective
   ],
   exports: [
     HomeComponent

@@ -35,6 +35,21 @@ import {
 export class HomeComponent implements OnInit  {
   zoom: Boolean = false;
   vv: any;
+
+
+  items = [
+    { title: 'Slide 1', image: 'assets/laptop1.jpeg' },
+    { title: 'Slide 2', image: 'assets/laptop2.jpeg' },
+    { title: 'Slide 3', image: 'assets/laptop1.jpeg' },
+  ]
+  
+  addSlide() {
+    this.items.push({
+      title: `Slide 4` , image: 'assets/laptop2.jpeg' 
+    });
+  }
+
+
    portflio = [
   {id: 1, image: "assets/01.jpg", department: 'Angular Development'},
   {id: 1, image:"assets/01.jpg", department: 'Pythan Development'},

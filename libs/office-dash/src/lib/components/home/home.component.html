@@ -1,4 +1,28 @@
 <officeintegrator-header></officeintegrator-header>
+
+
+
+ 
+      <div class="carousel-wrapper">
+          <div style="margin: 2em" class="container">  
+              <app-carousel>
+                <ng-container *ngFor="let item of items;">
+                  <ng-container *carouselItem>
+                    <div class="item">
+                      
+                      <img src="{{item.image}}" alt="">
+                      
+                    </div>
+                  </ng-container>
+                </ng-container> 
+
+              </app-carousel> 
+            </div>
+      </div>
+  
+   
+
+
 <section class="stackasianF">
   <div fxLayout="row" fxLayoutAlign="space-around center">
     <img class="bannerImage" fxFlexFill src='assets/banner.jpg' alt="ss" />
@@ -313,8 +337,7 @@
                      
                       <div ngClass="hoverEffect" fxFlex="100%" fxLayoutAlign="space-around center" (click)="imageZoom(portflio.image)">
                           <mat-icon>visibility_off</mat-icon>
-                          <div class="department">{{portflio.department}}</div>
-                          
+                          <div class="department">{{portflio.department}}</div> 
                       </div>  
                     </mat-card> 
                   </div>

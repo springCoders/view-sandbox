@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, Inject, HostListener, ElementRef, ViewChild} from '@angular/core';
 import { AnimationEvent } from '@angular/animations';
 import {
   trigger,
@@ -7,8 +7,10 @@ import {
   animate,
   transition
 } from '@angular/animations';
-
- 
+import {TweenLite} from "gsap";
+import { Indicator } from './indicator';
+declare var $: any;
+declare var TweenMax: any;
 @Component({
   selector: 'officeintegrator-home',
   templateUrl: './home.component.html',
@@ -32,10 +34,31 @@ import {
   //   ]),
   // ], 
 })
+
 export class HomeComponent implements OnInit  {
+
+  index = 0;
+  speed = 5000;
+  infinite = true;
+  direction = 'right';
+  directionToggle = true;
+  autoplay = true;
+  avatars = '12345'.split('').map((x, i) => {
+    const num = i;
+    // const num = Math.floor(Math.random() * 1000);
+    return {
+      url: `https://picsum.photos/600/400/?${num}`,
+      title: `${num}`
+    };
+  });
+
+  // @ViewChild('slider') sliderEl: ElementRef;
+  eventText = '';
+  indicators;
+   
   zoom: Boolean = false;
   vv: any;
-
+   
 
   items = [
     { title: 'Slide 1', image: 'assets/laptop1.jpeg' },
@@ -84,7 +107,85 @@ client =[
   }
   mouseenter(){ }
   mouseleave(){}
-  constructor() { }
+  
+  
+
+constructor() { 
+    this.indicators = new Indicator();
+
+    // Hammer.on(window, "load resize scroll", function(ev) {
+    
+    //   var myElement = document.getElementById('inTry');
+    //   var myElement2 = document.getElementById('inTry2');
+    //   //     var hammertime = new Hammer(myElement);
+    //   //     hammertime.on('pan', function(ev) {
+    //   // 	console.log(ev);
+    //   // });
+      
+    //   var mc = new Hammer.Manager(myElement, {
+    //     recognizers: [ 
+    //       [Hammer.Rotate],
+    //       [Hammer.Pinch, { enable: false }, ['rotate']],
+    //       [Hammer.Swipe,{ direction: Hammer.DIRECTION_HORIZONTAL }],
+    //     ]
+    //   });
+    //   var hammertime = new Hammer(document.getElementById('inTry'));
+    //   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    //   hammertime.get('pinch').set({ enable: true });
+    //   hammertime.get('rotate').set({ enable: true });
+    //   hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });       // var pinch = new Hammer.Pinch();
+    //   // mc.add(pinch);
+    //   mc.add( new Hammer.Swipe({ direction: Hammer.DIRECTION_ALL, threshold: 0, pointers: 0 }) );
+    //   mc.add( new Hammer.Tap({ event: 'quadrupletap', taps: 4 }) );
+    //   var lastCenter;
+
+    //   function onDrag(ev){
+
+    //     var center = ev.gesture.center;
+    //     if (lastCenter) 
+    //     myElement2.innerHTML = "hello inner";
+    //     lastCenter = center;
+    // }
+
+    //   mc.on("Swipe", onDrag);
+      
+    //   console.log(ev.type);
+    // });
+    Hammer.on(window, "load resize scroll", function(ev) {
+    // var sliderEl = document.querySelector( '.slider' );
+    var sliderEl = document.getElementById( 'slider' );
+    var slideCount = 3;
+    var activeSlide = 0; // NEW: the current slide # (0 = first)
+    var sliderManager = new Hammer.Manager( sliderEl );
+    sliderManager.add( new Hammer.Pan({ threshold: 0, pointers: 0 }) );
+    sliderManager.on( 'pan', function( e ) {
+      var percentage = 100 / slideCount * e.deltaX / window.innerWidth;
+      var transformPercentage = percentage - 100 / slideCount * activeSlide; // NEW
+      sliderEl.style.transform = 'translateX( ' + transformPercentage + '% )';
+      if( e.isFinal ) { // NEW: this only runs on event end
+        if( percentage < 0 )
+          goToSlide( activeSlide + 1 );
+        else if( percentage > 0 )
+          goToSlide( activeSlide - 1 );
+        else
+          goToSlide( activeSlide );
+      }
+    });
+    
+    // NEW: function that changes the slide
+    var goToSlide = function( number ) {
+      if( number < 0 )
+        activeSlide = 0;
+      else if( number > slideCount - 1 )
+        activeSlide = slideCount - 1
+      else
+        activeSlide = number;
+    
+     var percentage = -( 100 / slideCount ) * activeSlide;
+     sliderEl.style.transform = 'translateX( ' + percentage + '% )';
+    };
+    });
+  }
 
   ngOnInit() {}
 
@@ -95,4 +196,29 @@ client =[
   close(){
     this.zoom = false;
   }
+ 
+ 
+push() {
+  this.avatars.push(
+    {
+      url: `https://picsum.photos/600/400/?${this.avatars.length + 1}`,
+      title: `${this.avatars.length + 1}`
+    }
+  );
 }
+
+remove() {
+  this.avatars.splice(this.avatars.length - 1, 1);
+}
+
+
+indexChanged(index) {
+  console.log(index);
+}
+
+toggleDirection($event) {
+  this.direction = this.directionToggle ? 'right' : 'left';
+}
+
+
+ }

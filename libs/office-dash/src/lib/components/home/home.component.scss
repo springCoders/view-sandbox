@@ -405,7 +405,7 @@ span.jnd::before {
       font-size: 50px;
       color: white;
   }
-   
+    
   .closeXs{
     right: 5%;
     top: 2%;
@@ -425,3 +425,267 @@ span.jnd::before {
     margin-top: 15vh;
     width: 100%;
   }
+
+  #myElement {
+    background: silver;
+    height: 300px;
+    text-align: center;
+    font: 30px/300px Helvetica, Arial, sans-serif;
+  }
+ 
+
+
+  body{
+    margin:0;
+  }
+  
+  .yeller{
+    position: fixed;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1337;
+    font-family: 'Andale Mono';
+    font-size: 4em;
+    pointer-events:none;
+  }
+  
+  .canvas{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow:hidden;
+  }
+  .block{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    
+  }
+  
+  .yellow{background: #FFF380;}
+  .green{background: green; left: 100vw;}
+  .red{background: red; left: 200vw}
+  .blue{background: blue; top: 100vh;}
+  .pink{background: pink; top: 100vh; left: 100vw}
+  .orange{background: orange; top: 100vh; left: 200vw}
+  .brown{background: brown; top: 200vh; }
+  .lime{background: lime; top: 200vh; left:100vw;}
+  div#canvas {
+    width: 100%;
+    float: left;
+}
+.vbn{
+    width: 100%;
+    float: left;
+}
+
+// $sliderCards: 3
+
+// *
+//   background-position: center center
+//   background-repeat: no-repeat
+//   background-size: auto 100%
+
+// body
+//   background-color: black
+//   font-family: sans-serif
+//   margin: 0
+//   padding: 0
+
+// .slider
+//   display: flex
+//   transition: transform 400ms cubic-bezier( 0.5, 0, 0.5, 1 )
+//   width: 100% * $sliderCards
+ 
+// .slider-panel
+//   padding-top: 10%
+//   width: 100%
+
+// .has-slider
+//   overflow: hidden
+//   width: 100%
+//   &::after
+//     animation: flash 1s infinite
+//     color: red
+//     content: "SLUG MODE"
+//     font: 700 48px/1 sans-serif
+//     left: 50%
+//     pointer-events: none
+//     position: absolute
+//     top: 50%
+//     transform: translate( -50%, -50% )
+
+// .colophon
+//   color: #808080
+//   padding-bottom: 1em
+//   padding-top: 1em
+//   text-align: center
+  
+// a
+//   color: white
+//   font-size: 14px
+//   letter-spacing: 0.125em
+//   text-decoration: none
+//   text-transform: uppercase
+
+// @keyframes flash
+//   50%
+//     opacity: 0
+
+
+.abc{
+  width: 100%;
+  float: left;
+  height: 60vh;
+}
+
+$transition_time:.2s;
+
+.carousel {
+  color:white;
+  .content {
+    display: flex;
+
+    .item {
+      width: 100%;
+      display: block;
+      // fade
+      opacity: 0;
+
+      // using delay to prevent left change show error
+      &.fade_animation {
+        transition: opacity 0.295s linear $transition_time;
+      }
+
+      &.fade_animation_0 {
+        transition: opacity 0.295s linear;
+      }
+
+      &.visible {
+        opacity: 1;
+      }
+
+      &:last-child,
+      &:first-child,
+      {
+        opacity: 0;
+      }
+
+      &.visible_important {
+        opacity: 1;
+      }
+
+      .img {
+        // width: 100%;
+        // display: block;
+        // background-size: cover;
+        // background-position: center;
+        height: 60vh;
+        object-fit: contain;
+        // padding-bottom: 50%;
+      }
+    }
+
+
+  }
+
+  .ball {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid;
+    opacity: 0.5;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ff5252;
+  }
+
+  .click-area {
+    width: 50px;
+    text-align: center;
+
+    i {
+      font-size: 3em;
+    }
+  }
+}
+
+
+.try{
+  width: 100%;
+  float: left;
+}
+
+
+// second slider
+$sliderCards: 3;
+ 
+
+
+// .{
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: auto 100%;
+// }
+
+
+// body
+//  { 
+//    background-color: black;
+//   font-family: sans-serif;
+//   margin: 0;
+//   padding: 0;
+// }
+
+
+  .slider
+  {
+  display: flex;
+  transition: transform 400ms cubic-bezier( 0.5, 0, 0.5, 1 );
+  width: 100% * $sliderCards;
+  }
+.slider-panel
+{padding-top: 10%;
+width: 100%;}
+
+.has-slider
+  {overflow: hidden;
+  width: 100%;}
+  .has-slider::after{
+    animation: flash 1s infinite;
+    color: red;
+    content: "SLUG MODE";
+    font: 700 48px/1 sans-serif;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate( -50%, -50% );
+}
+.colophon
+  {color: #808080;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  text-align: center;}
+  
+a
+  {color: white;
+  font-size: 14px;
+  letter-spacing: 0.125em;
+  text-decoration: none;
+  text-transform: uppercase;}
+
+// @keyframes flash{
+//   50%;
+//     opacity: 0}

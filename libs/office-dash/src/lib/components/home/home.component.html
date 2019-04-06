@@ -2,26 +2,6 @@
 
 
 
- 
-      <div class="carousel-wrapper">
-          <div style="margin: 2em" class="container">  
-              <app-carousel>
-                <ng-container *ngFor="let item of items;">
-                  <ng-container *carouselItem>
-                    <div class="item">
-                      
-                      <img src="{{item.image}}" alt="">
-                      
-                    </div>
-                  </ng-container>
-                </ng-container> 
-
-              </app-carousel> 
-            </div>
-      </div>
-  
-   
-
 
 <section class="stackasianF">
   <div fxLayout="row" fxLayoutAlign="space-around center">
@@ -90,6 +70,125 @@
 
 
   <!-- first section -->
+
+
+ 
+  <!-- <div class="carousel-wrapper">
+    <div style="margin: 2em" class="container">  
+        <app-carousel>
+          <ng-container *ngFor="let item of items;">
+            <ng-container *carouselItem>
+              <div class="item"> 
+                  {{item.title}}
+               //  <img src="{{item.image}}" alt=""> //
+              </div>
+            </ng-container>
+          </ng-container> 
+        </app-carousel> 
+      </div>
+</div> -->
+
+<!-- hammer swip -->
+  
+
+<section class="try">
+  <!-- <div class="try1" id="inTry">
+    Hello i Am IN TRY
+  </div>
+  <div class="try2" id="inTry2"> </div> -->
+  <div class='has-slider'>
+    <div class='slider' id='slider'>
+      <div class='slider-panel' style="background-color: #faaf34; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_4dfa47a05152487fb3bc45ca2ec8fd1e.png);"></div>
+      <div class='slider-panel' style="background-color: #aca680; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_761db9a0c113407f924a824ed173ed26.png);"></div>
+      <div class='slider-panel' style="background-color: #d8daa6; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/tumblr_njkn6kp0kE1qgsw73o1_500.png)"></div>
+    </div>
+  </div>
+  <div class='colophon'>
+    Artwork ©
+    <a>Sachin Teng</a>
+  </div>
+  
+</section>
+
+
+ <section class="abc">
+  <ngx-hm-carousel
+  [(ngModel)]="index"
+  (ngModelChange)="indexChanged($event)"
+  [autoplay-speed]="speed"
+  [autoplay]="autoplay"
+  [autoplay-direction]="direction"
+  [infinite]="infinite"
+  [between-delay]="2000"
+  [data]="avatars"
+  [aniTime]="200"
+  class="carousel">
+
+  <section ngx-hm-carousel-container class="content">
+    <article class="item cursor-pointer visible_important"
+      ngx-hm-carousel-item
+      *ngFor="let avatar of avatars; let i = index">
+      <div class="img"
+        [style.backgroundImage]="'url('+avatar.url+')'">
+      </div>
+    </article>
+    <ng-template #infiniteContainer></ng-template>
+  </section>
+
+  <ng-template #carouselContent let-avatar let-i="index">
+    <article class="item cursor-pointer visible_important">
+      <div class="img"
+        [style.backgroundImage]="'url('+avatar.url+')'">
+      </div>
+    </article>
+  </ng-template>
+
+  <ng-template #carouselPrev>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_left</i>
+    </div>
+  </ng-template>
+  <ng-template #carouselNext>
+    <div class="click-area">
+      <i class="material-icons">keyboard_arrow_right</i>
+    </div>
+  </ng-template>
+
+  <ng-template #carouselDot let-model>
+    <div class="ball bg-accent"
+      [class.visible]="model.index === model.currentIndex"></div>
+  </ng-template>
+
+</ngx-hm-carousel>
+ </section>
+ 
+<!-- sliderrr -->
+ 
+  <!-- slider end -->
+
+
+
+
+
+<div
+class="gesture__indicator"
+*ngFor="let indicator of indicators.gestureIndicators"
+[style.top.px]="indicator.y - (indicator.size/2)"
+[style.left.px]="indicator.x - (indicator.size/2)"
+[style.width.px]="indicator.size"
+[style.height.px]="indicator.size"
+[style.transform]="indicator.transform"
+[@indicatorState]="indicator.state">
+</div>
+
+<!-- press end -->
+
+
+
+
+
+
+
 
 
   <!-- second section -->

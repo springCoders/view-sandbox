@@ -72,24 +72,24 @@
   <!-- first section -->
 
 
- 
+
   <!-- <div class="carousel-wrapper">
-    <div style="margin: 2em" class="container">  
+    <div style="margin: 2em" class="container">
         <app-carousel>
           <ng-container *ngFor="let item of items;">
             <ng-container *carouselItem>
-              <div class="item"> 
+              <div class="item">
                   {{item.title}}
                //  <img src="{{item.image}}" alt=""> //
               </div>
             </ng-container>
-          </ng-container> 
-        </app-carousel> 
+          </ng-container>
+        </app-carousel>
       </div>
 </div> -->
 
 <!-- hammer swip -->
-  
+
 
 <section class="try">
   <!-- <div class="try1" id="inTry">
@@ -98,20 +98,18 @@
   <div class="try2" id="inTry2"> </div> -->
   <div class='has-slider'>
     <div class='slider' id='slider'>
-      <div class='slider-panel' style="background-color: #faaf34; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_4dfa47a05152487fb3bc45ca2ec8fd1e.png);"></div>
-      <div class='slider-panel' style="background-color: #aca680; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/65d721_761db9a0c113407f924a824ed173ed26.png);"></div>
-      <div class='slider-panel' style="background-color: #d8daa6; background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/40288/tumblr_njkn6kp0kE1qgsw73o1_500.png)"></div>
+      <div class='slider-panel' style="background-color: #faaf34; background-image: url(assets/laptop1.jpeg);"></div>
+      <div class='slider-panel' style="background-color: #aca680; background-image: url(assets/laptop2.jpeg);"></div>
+      <div class='slider-panel' style="background-color: #d8daa6; background-image: url(assets/laptop1.jpeg)"></div>
+      <div class='slider-panel' style="background-color: #faaf34; background-image: url(assets/laptop2.jpeg);"></div>
+      <div class='slider-panel' style="background-color: #aca680; background-image: url(assets/laptop1.jpeg);"></div>
+      <div class='slider-panel' style="background-color: #d8daa6; background-image: url(assets/laptop2.jpeg)"></div>
     </div>
   </div>
-  <div class='colophon'>
-    Artwork ©
-    <a>Sachin Teng</a>
-  </div>
-  
 </section>
 
 
- <section class="abc">
+ <!-- <section class="abc">
   <ngx-hm-carousel
   [(ngModel)]="index"
   (ngModelChange)="indexChanged($event)"
@@ -160,10 +158,10 @@
   </ng-template>
 
 </ngx-hm-carousel>
- </section>
- 
+ </section> -->
+
 <!-- sliderrr -->
- 
+
   <!-- slider end -->
 
 
@@ -192,14 +190,59 @@ class="gesture__indicator"
 
 
   <!-- second section -->
-  <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+  <!-- <div class='has-slider'>
+      <div class='slider' id='slider'>
+
+        <div class="slider-panels">
+          <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+              <div fxFlex="50%" style="background-color: #faaf34; border-radius: 15px; height: 350px; background-image: url('assets/laptop1.jpeg');">
+
+              </div>
+              <div fxFlex="50%" style="background-color: #faaf34;  border-radius: 15px; height: 350px; background-image: url('assets/laptop2.jpeg');">
+
+              </div>
+          </div>
+        </div>
+
+        <div class="slider-panels">
+          <div class="slider-panel" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+              <div fxFlex="50%" style="background-color: #faaf34;  border-radius: 15px; height: 350px; background-image: url('assets/laptop1.jpeg');">
+
+              </div>
+              <div fxFlex="50%" style="background-color: #faaf34;  border-radius: 15px; height: 350px; background-image: url('assets/laptop2.jpeg');">
+
+              </div>
+          </div>
+        </div>
+
+        <div class="slider-panels">
+           <div class="slider-panel" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+              <div fxFlex="50%" style="background-color: #faaf34;  border-radius: 15px; height: 350px; background-image: url(assets/laptop1.jpeg);">
+
+              </div>
+              <div fxFlex="50%" style="background-color: #faaf34;  border-radius: 15px; height: 350px; background-image: url(assets/laptop2.jpeg);">
+
+              </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+
+
+
+  <!-- <div class="roundd" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
     <div fxFlex="50%">
       <img fxFlexFill src="assets/laptop1.jpeg" />
     </div>
     <div fxFlex="50%">
       <img fxFlexFill src="assets/laptop2.jpeg" />
     </div>
-  </div>
+  </div> -->
+
+
   <!-- ! second section -->
 
   <!--  third section -->
@@ -412,7 +455,7 @@ class="gesture__indicator"
         <h2 ngClass="whatIdo">
           RECENT PROJECTS</h2>
       </div>
-      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+      <div ngClass="portfolio" ngClass.xs="portfolioXS">
         <p ngClass="portfoliop">
           Interdum a etiam sagittis vehicula porta. Massa felis eros quam
           blandit nulla dolor habitant. Ullamcorper quis ornare et proin
@@ -430,15 +473,15 @@ class="gesture__indicator"
               <div class="recentProject2" *ngFor="let portflio of portflio">
                 <div fxLayout="row-wrap">
                   <div fxLayoutGap="20px">
-                    <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}"> 
-                        
+                    <mat-card ngClass='portfolioImages' fxFlexFill [ngStyle]="{ 'padding.px': '0'}">
+
                       <img ngClass="portfolioImage" fxFlex="100%" src="{{portflio.image}}" alt="" (click)="imageZoom(portflio.image)">
-                     
+
                       <div ngClass="hoverEffect" fxFlex="100%" fxLayoutAlign="space-around center" (click)="imageZoom(portflio.image)">
                           <mat-icon>visibility_off</mat-icon>
-                          <div class="department">{{portflio.department}}</div> 
-                      </div>  
-                    </mat-card> 
+                          <div class="department">{{portflio.department}}</div>
+                      </div>
+                    </mat-card>
                   </div>
                 </div>
               </div>
@@ -448,25 +491,27 @@ class="gesture__indicator"
           <div fxFlexOffset="50px"></div>
         </div>
 
-         
-          
+
+
           <div id="myModal" class="modal" *ngIf="zoom">
               <div fxLayout="row inline"  fxLayoutAlign="space-around center">
               <!-- Modal content -->
               <div class="modal-content">
                 <span class="close" ngClass.xs="closeXs" (click)="close()">&times;</span>
                 <img class="modalImg" ngClass.xs="modalImage" src="{{vv}}"  alt="">
-                 
+
               </div>
               </div>
           </div>
-          
+
 
 
       </div>
       <div fxFlexOffset="0px" fxFlexOffset.xs="0px"></div>
       <div fxFlexOffset="0px"></div>
     </div>
+
+
     <div class="roundd" fxLayout="column" fxLayoutAlign="space-around center">
       <div fxFlexOffset="20px" ngClass="ourBusiness">
         <span class="jnd">TESTIMONIAL</span>
@@ -476,48 +521,74 @@ class="gesture__indicator"
           WHAT CLIENT SAY’S
         </h2>
       </div>
-      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+      <div ngClass="portfolio" ngClass.xs="portfolioXS">
         <p ngClass="portfoliop">
           Interdum a etiam sagittis vehicula porta. Massa felis eros quam
           blandit nulla dolor habitant. Ullamcorper quis ornare et proin
           pellentesque.
         </p>
       </div>
-      <div fxFlexOffset="100px">
-        <div fxLayout="row" fxLayoutGap="40px" fxLayout.xs="column" fxLayoutAlign="space-between center">
+
+
+
+
+
+      <!-- <div class='has-slider'>
+        <div class='slider' id='slider'>
+          <div class='slider-panel' style="background-color: #faaf34; background-image: url(assets/laptop1.jpeg);"></div>
+          <div class='slider-panel' style="background-color: #aca680; background-image: url(assets/laptop2.jpeg);"></div>
+          <div class='slider-panel' style="background-color: #d8daa6; background-image: url(assets/laptop1.jpeg)"></div>
+          <div class='slider-panel' style="background-color: #faaf34; background-image: url(assets/laptop2.jpeg);"></div>
+          <div class='slider-panel' style="background-color: #aca680; background-image: url(assets/laptop1.jpeg);"></div>
+          <div class='slider-panel' style="background-color: #d8daa6; background-image: url(assets/laptop2.jpeg)"></div>
+        </div>
+      </div> -->
+
+
+
+
+
+      <div class="ok" fxFlexOffset="100px">
+        <div fxLayout="row" fxLayoutGap="40px" fxLayoutAlign="space-between center">
           <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
-          <div fxFlex="50%" *ngFor="let client of client">
-            <mat-card [ngStyle]="{ 'padding.px': '0'}">
-              <div class="flex-container" [ngStyle]="{ 'padding.px': '0 25'}">
-                <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start start">
-                  <div fxFlexOffset="60px">
-                    <img
-                      [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
-                      fxFlex="100%" src="{{client.image}}">
-                  </div>
-                  <div>
-                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                    <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
-                  </div>
-                  <div>
-                    <a [ngStyle]="{'font-size.px': 16, color: '#6f7177', 'letter-spacing.px': .4}">
-                      {{client.name}}
-                    </a>
-                  </div>
-                  <div>
-                    <p
-                      [ngStyle]="{'font-size.px': 14, color: '#7e838e', 'letter-spacing.px': .4,  'line-height.px': 21}">
-                      {{client.comment}}
-                    </p>
-                  </div>
-                  <div></div>
+            <div class='has-sliderTwo'>
+
+              <div class='sliderTwo' id='sliderTwo'>
+                  <div class=""  *ngFor="let client of client">
+                <div class='slider-panelTwo'>
+                    <mat-card [ngStyle]="{ 'padding.px': '0'}">
+                      <div class="flex-container" [ngStyle]="{ 'padding.px': '0 25'}">
+                        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start start">
+                          <div fxFlexOffset="60px">
+                            <img
+                              [ngStyle]="{ 'height.px': 100, 'width.px': 100, 'border-radius': '100%', 'position': 'absolute', 'top': '-35px'}"
+                              fxFlex="100%" src="{{client.image}}">
+                          </div>
+                          <div>
+                            <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                             <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                            <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                            <mat-icon [ngStyle]="{'color': '#f8b22d'}">grade</mat-icon>
+                          </div>
+                          <div>
+                            <a [ngStyle]="{'font-size.px': 16, color: '#6f7177', 'letter-spacing.px': .4}">
+                              {{client.name}}
+                            </a>
+                          </div>
+                          <div>
+                            <p
+                              [ngStyle]="{'font-size.px': 14, color: '#7e838e', 'letter-spacing.px': .4,  'line-height.px': 21}">
+                              {{client.comment}}
+                            </p>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </mat-card>
                 </div>
               </div>
-            </mat-card>
-          </div>
-
+              </div>
+            </div>
           <div fxFlexOffset="30px" fxFlexOffset.xs="0px"></div>
         </div>
       </div>
@@ -537,7 +608,7 @@ class="gesture__indicator"
           GET IN TOUCH
         </h2>
       </div>
-      <div ngClass="portfolio" [ngClass.xs]="portfolioXS">
+      <div ngClass="portfolio" ngClass.xs="portfolioXS">
         <p ngClass="portfoliop">
           Interdum a etiam sagittis vehicula porta. Massa felis eros quam
           blandit nulla dolor habitant. Ullamcorper quis ornare et proin
